@@ -1,34 +1,23 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React, { useEffect, useState } from "react";
-import Auth from "../screens/Auth";
-import AppRoutes from "./app.route";
+import React, { useContext } from "react";
+import AuthContext from "../context/Auth";
+import { AppRoutes } from "./app.route";
+import { AuthRoutes } from "./auth.routes";
 
 const Stack = createNativeStackNavigator();
 
 const Routes = () => {
-  const [user, setUser] = useState<string | null | number>(0);
-
-  useEffect(() => {
-    async function getUserInfo() {
-      const user = await AsyncStorage.getItem("@BOT:user");
-      setUser(user);
-    }
-    getUserInfo();
-  }, []);
+  // const [user, setUser] = useState<string | null | number>(0);
+  const { user } = useContext(AuthContext)
 
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
+    <>
       {user ? (
-        <Stack.Screen name="Routes" component={AppRoutes} />
+        <AppRoutes />
       ) : (
-        <Stack.Screen name="Login" component={Auth} />
+        <AuthRoutes />
       )}
-    </Stack.Navigator>
+    </>
   );
 };
 

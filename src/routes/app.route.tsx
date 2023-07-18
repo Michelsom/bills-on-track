@@ -1,14 +1,14 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import Icons from "../components/Icons";
-import Home from "../screens/Home";
+import { DashboardScreen } from "../screens/DashboardScreen";
 import Report from "../screens/Report";
 import Settings from "../screens/Settings";
 import { darkTheme } from "../theme/colors";
 
 const Tab = createBottomTabNavigator();
 
-const AppRoutes = () => {
+export const AppRoutes: React.FC = () => {
   return (
     <Tab.Navigator
       sceneContainerStyle={{
@@ -31,8 +31,8 @@ const AppRoutes = () => {
             <Icons name="home" color={focused ? color : darkTheme.grey100} />
           ),
         }}
-        name="Home"
-        component={Home}
+        name="DashboardScreen"
+        component={DashboardScreen}
       />
       <Tab.Screen
         options={{
@@ -59,4 +59,3 @@ const AppRoutes = () => {
   );
 };
 
-export default AppRoutes;
