@@ -15,6 +15,7 @@
     "@types/dinero.js": "^1.9.0",
     "@types/react-navigation": "^3.4.0",
     "@types/styled-components": "^5.1.26",
+    "add": "^2.0.6",
     "dinero.js": "^1.9.1",
     "expo": "~48.0.18",
     "expo-auth-session": "~4.0.3",
@@ -24,14 +25,19 @@
     "expo-web-browser": "~12.1.1",
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-calendars": "^1.1299.0",
+    "react-native-chart-kit": "^6.12.0",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
+    "react-native-svg": "^13.10.0",
     "styled-components": "^6.0.4",
-    "styled-components-native": "^1.0.2"
+    "styled-components-native": "^1.0.2",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.0.14",
+    "@types/react-native": "^0.72.2",
     "typescript": "^4.9.4"
   },
   "private": true
