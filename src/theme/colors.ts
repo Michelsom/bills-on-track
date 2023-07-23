@@ -1,10 +1,10 @@
 export const darkTheme = {
-  primary: '#28B473',
+  primary: '#16C64F',
   background: '#333',
 
   title: '#fff',
   text: '#fff',
-
+  greenColor: '#008440',
   accent: '#8A85FF',
   grey100: '#888',
   black: '#000',
